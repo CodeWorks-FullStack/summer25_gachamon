@@ -7,7 +7,6 @@ body {
 
 main {
   flex-grow: 1;
-  display: flex;
 }
 
 #pop-toast-container {
@@ -15,4 +14,21 @@ main {
   flex-direction: column;
   justify-content: start;
   align-items: end;
+}
+
+.gachamon-border {
+  border: thick double black;
+}
+
+
+
+/* FIXME what is up with this */
+.gachamon-border:hover span {
+  transform: translateY(-.3em) !important;
+  transition: all .1s ease-in-out;
+}
+
+.gachamon-border span {
+  display: inline-block;
+  transition: all .6s ease-in-out;
 }

@@ -9,4 +9,19 @@ export class Gachamon {
     this.quantity = 0
   }
 
+  gachamonCardHTMLTemplate() {
+
+    return `
+    <div class="col-md-2 mb-3">
+      <div class="rounded bg-primary p-2 gachamon-border">
+        <div class="text-end">
+          <b>Oslo</b>
+          <hr>
+        </div>
+        <div class="text-center">
+          <span class="display-1">🦧</span>
+        </div>
+      </div>
+    </div>`
+  }
 }
