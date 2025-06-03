@@ -16,8 +16,7 @@ class ObservableAppState extends EventEmitter {
     new Gachamon({ name: 'jumbotron', emoji: '🐞', type: 'rad', rarity: 1 }),
   ]
 
-  // NOTE there will not be an activeGachamon when the application starts
-
+  // NOTE there will not be an activeGachamon when the application starts, so this will default to null. At some point, we can store a single Gachamon object here
   /** * @type {Gachamon}*/
   activeGachamon = null
 

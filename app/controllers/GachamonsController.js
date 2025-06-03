@@ -1,11 +1,10 @@
 import { AppState } from "../AppState.js";
 import { gachamonsService } from "../services/GachamonsService.js";
-import { CoinsController } from "./CoinsController.js";
 
 export class GachamonsController {
   // NOTE constructors in controllers *usually* run when the page loads
   constructor() {
-    // observers (state change)
+    // observers (watching for state changes) 💂
     AppState.on('activeGachamon', this.drawActiveGachamon)
     AppState.on('myGachamons', this.drawMyGachamons)
 
@@ -26,7 +25,7 @@ export class GachamonsController {
 
   drawActiveGachamon() {
     const gachamon = AppState.activeGachamon
-    console.log('drawing active', gachamon);
+    // console.log('drawing active', gachamon);
     const activeGachamonElem = document.getElementById('active-gachamon')
     activeGachamonElem.innerHTML = gachamon.activeHTMLTemplate
   }
@@ -40,13 +39,17 @@ export class GachamonsController {
   }
 
   selectGachamon(gachamonName) {
-    console.log('selecting gachamon', gachamonName);
+    // console.log('selecting gachamon', gachamonName);
     gachamonsService.setActiveGachamon(gachamonName)
+
+    // NOTE observer will handle drawing
     // this.drawActiveGachamon()
   }
 
   selectRandomGachamon() {
     gachamonsService.getRandomGachamon()
+
+    // NOTE observer will handle drawing
     // this.drawActiveGachamon()
   }
 

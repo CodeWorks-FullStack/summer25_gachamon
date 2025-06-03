@@ -4,9 +4,10 @@ import { coinsService } from "../services/CoinsService.js";
 export class CoinsController {
   constructor() {
     console.log('🪙🪙🪙 Coins controller!!!!');
-    // NOTE 💂-----> AppState.coins
+    // NOTE AppState.on allows us to observe a property in the AppState (1st argument) for changes. If that property changes, .on will immediately invoke its callback function (2nd argument)
+    // 💂-----> AppState.coins
     // AppState.coins++ || AppState.coins--
-    // 💂!!!!! --> drawCoins()
+    // 💂!!!!! drawCoins()
     AppState.on('coins', this.drawCoins)
   }
 

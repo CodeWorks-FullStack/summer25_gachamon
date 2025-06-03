@@ -5,7 +5,7 @@ class CoinsService {
     // NOTE stupid primitives
     // let coins = AppState.coins
     // coins++
-    AppState.coins++
+    AppState.coins++ // 💂!!! triggers observer
     // console.log('increasing coins', AppState.coins);
   }
 }
