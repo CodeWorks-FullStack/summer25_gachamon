@@ -1,3 +1,4 @@
+import { AppState } from "../AppState.js"
 
 export class Gachamon {
   // NOTE we can pass an object through the constructor
@@ -6,7 +7,6 @@ export class Gachamon {
     this.type = data.type
     this.emoji = data.emoji
     this.rarity = data.rarity
-    this.quantity = 0
   }
 
   // NOTE a getter is a computed property
@@ -75,5 +75,17 @@ export class Gachamon {
     }
 
     return emojis
+  }
+
+  get quantity() {
+    let count = 0
+
+    AppState.myGachamons.forEach(gachamon => {
+      if (gachamon.name == this.name) {
+        count++
+      }
+    })
+
+    return count
   }
 }

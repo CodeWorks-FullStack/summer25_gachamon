@@ -7,6 +7,7 @@ export class GachamonsController {
   constructor() {
     // observers (state change)
     AppState.on('activeGachamon', this.drawActiveGachamon)
+    AppState.on('myGachamons', this.drawMyGachamons)
 
     // page load
     console.log('GACHAMONS ARE READY TO BE ACQUIRED 🐿️🦞🐢');
@@ -28,6 +29,14 @@ export class GachamonsController {
     console.log('drawing active', gachamon);
     const activeGachamonElem = document.getElementById('active-gachamon')
     activeGachamonElem.innerHTML = gachamon.activeHTMLTemplate
+  }
+
+  drawMyGachamons() {
+    const gachamons = AppState.myGachamons
+    let gachamonCards = ''
+    gachamons.forEach(gachamon => gachamonCards += gachamon.cardHTMLTemplate)
+    const myGachamonsElem = document.getElementById('my-gachamons')
+    myGachamonsElem.innerHTML = gachamonCards
   }
 
   selectGachamon(gachamonName) {

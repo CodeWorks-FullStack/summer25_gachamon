@@ -15,7 +15,10 @@ class GachamonsService {
     const randomGachamon = gachamons[randomIndex]
     console.log('index is ' + randomIndex);
     console.log('gachamon is ' + randomGachamon.name);
+    AppState.myGachamons.push(randomGachamon)
     AppState.activeGachamon = randomGachamon
+    console.log(AppState.myGachamons);
+
   }
 
   setActiveGachamon(name) {
