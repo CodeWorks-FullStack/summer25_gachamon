@@ -12,9 +12,14 @@ export class GachamonsController {
     const gachamonsListElem = document.getElementById('gachamons-list')
     let gachamonCards = ''
     gachamons.forEach(gachamon => gachamonCards += gachamon.cardHTMLTemplate)
-    console.log(gachamonCards);
+    // console.log(gachamonCards);
 
     gachamonsListElem.innerHTML = gachamonCards
+  }
+
+  selectGachamon(gachamonName) {
+    console.log('selecting gachamon', gachamonName);
+
   }
 
 }

@@ -16,7 +16,7 @@ export class Gachamon {
 
     return `
     <div class="col-md-2 mb-3">
-      <div class="rounded p-2 gachamon-border ${this.backgroundColor}">
+      <div onclick="app.gachamonsController.selectGachamon('${this.name}')" class="rounded p-2 gachamon-border ${this.backgroundColor}">
         <div class="text-end">
           <b>${this.name}</b>
           <hr>
