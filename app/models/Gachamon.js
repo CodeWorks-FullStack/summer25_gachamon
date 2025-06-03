@@ -9,19 +9,39 @@ export class Gachamon {
     this.quantity = 0
   }
 
-  gachamonCardHTMLTemplate() {
+  // NOTE a getter is a computed property
+  // a getter cannot take any arguments (can have no parameters)
+  // a getter must return a value
+  get cardHTMLTemplate() {
 
     return `
     <div class="col-md-2 mb-3">
-      <div class="rounded bg-primary p-2 gachamon-border">
+      <div class="rounded p-2 gachamon-border ${this.backgroundColor}">
         <div class="text-end">
-          <b>Oslo</b>
+          <b>${this.name}</b>
           <hr>
         </div>
         <div class="text-center">
-          <span class="display-1">🦧</span>
+          <span class="display-1">${this.emoji}</span>
         </div>
       </div>
     </div>`
+  }
+
+  get backgroundColor() {
+    if (this.type == 'intellectual') {
+      return 'bg-primary'
+    }
+
+    if (this.type == 'rad') {
+      return 'bg-info'
+    }
+
+    if (this.type == 'charger') {
+      return 'bg-danger'
+    }
+
+
+    return 'bg-light'
   }
 }

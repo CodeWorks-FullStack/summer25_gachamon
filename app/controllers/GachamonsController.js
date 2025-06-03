@@ -11,7 +11,7 @@ export class GachamonsController {
     const gachamons = AppState.gachamons
     const gachamonsListElem = document.getElementById('gachamons-list')
     let gachamonCards = ''
-    gachamons.forEach(gachamon => gachamonCards += gachamon.gachamonCardHTMLTemplate())
+    gachamons.forEach(gachamon => gachamonCards += gachamon.cardHTMLTemplate)
     console.log(gachamonCards);
 
     gachamonsListElem.innerHTML = gachamonCards

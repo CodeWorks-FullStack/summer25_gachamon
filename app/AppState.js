@@ -13,6 +13,7 @@ class ObservableAppState extends EventEmitter {
     new Gachamon({ name: 'mr. worldwide', emoji: '🐢', type: 'rad', rarity: 5 }),
     new Gachamon({ name: 'snips', emoji: '🦞', type: 'charger', rarity: 1 }),
     new Gachamon({ name: 'squirrelttle', emoji: '🐿️', type: 'intellectual', rarity: 2 }),
+    new Gachamon({ name: 'jumbotron', emoji: '🐞', type: 'rad', rarity: 1 }),
   ]
 }
 
