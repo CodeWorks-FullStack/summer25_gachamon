@@ -15,6 +15,9 @@ class ObservableAppState extends EventEmitter {
     new Gachamon({ name: 'squirrelttle', emoji: '🐿️', type: 'intellectual', rarity: 2 }),
     new Gachamon({ name: 'jumbotron', emoji: '🐞', type: 'rad', rarity: 1 }),
   ]
+
+  // NOTE there will not be an activeGachamon when the application starts
+  activeGachamon = null
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())

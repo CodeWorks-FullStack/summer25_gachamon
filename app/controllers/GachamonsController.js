@@ -1,4 +1,5 @@
 import { AppState } from "../AppState.js";
+import { gachamonsService } from "../services/GachamonsService.js";
 
 export class GachamonsController {
   // NOTE constructors in controllers *usually* run when the page loads
@@ -19,7 +20,7 @@ export class GachamonsController {
 
   selectGachamon(gachamonName) {
     console.log('selecting gachamon', gachamonName);
-
+    gachamonsService.setActiveGachamon(gachamonName)
   }
 
 }
