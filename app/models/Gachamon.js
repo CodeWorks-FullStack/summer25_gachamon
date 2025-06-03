@@ -10,5 +10,3 @@ export class Gachamon {
   }
 
 }
-
-// new Gachamon({ name: 'oslo', emoji: '🦧', type: 'intellectual', rarity: 1 })
