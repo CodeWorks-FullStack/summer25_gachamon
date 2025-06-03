@@ -43,8 +43,8 @@ export class Gachamon {
           <div>${this.type}</div>
           <div>x${this.quantity}</div>
         </div>
-        <div class="text-center fs-3">
-          ${this.rarity}
+        <div class="text-center fs-3" title="Rarity is ${this.rarity}">
+          ${this.starEmojis}
         </div>
       </div>
     </div>
@@ -64,7 +64,16 @@ export class Gachamon {
       return 'bg-danger'
     }
 
-
     return 'bg-light'
+  }
+
+  get starEmojis() {
+    let emojis = ''
+
+    for (let i = 0; i < this.rarity; i++) {
+      emojis += '⭐'
+    }
+
+    return emojis
   }
 }
