@@ -6,7 +6,7 @@ class CoinsService {
     // let coins = AppState.coins
     // coins++
     AppState.coins++
-    console.log('increasing coins', AppState.coins);
+    // console.log('increasing coins', AppState.coins);
   }
 }
 

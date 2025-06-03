@@ -7,14 +7,14 @@ export class CoinsController {
   }
 
   addCoin() {
-    console.log('Adding coin! 🪙');
+    // console.log('Adding coin! 🪙');
     coinsService.increaseCoins()
     this.drawCoins()
   }
 
   drawCoins() {
     const coinsElem = document.getElementById('coin-count')
-    console.log('drawing coins!', coinsElem);
+    // console.log('drawing coins!', coinsElem);
     coinsElem.innerText = AppState.coins.toString()
   }
 }
