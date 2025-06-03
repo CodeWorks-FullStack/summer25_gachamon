@@ -28,6 +28,29 @@ export class Gachamon {
     </div>`
   }
 
+  get activeHTMLTemplate() {
+    return `
+    <div class="col-8">
+      <div class="rounded p-2 gachamon-border ${this.backgroundColor}">
+        <div class="text-end">
+          <h1>${this.name}</h1>
+          <hr>
+        </div>
+        <div class="text-center">
+          <span class="active-gachamon-size">${this.emoji}</span>
+        </div>
+        <div class="fs-3 d-flex justify-content-between">
+          <div>${this.type}</div>
+          <div>x${this.quantity}</div>
+        </div>
+        <div class="text-center fs-3">
+          ${this.rarity}
+        </div>
+      </div>
+    </div>
+    `
+  }
+
   get backgroundColor() {
     if (this.type == 'intellectual') {
       return 'bg-primary'

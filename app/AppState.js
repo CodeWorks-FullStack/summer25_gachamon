@@ -17,6 +17,8 @@ class ObservableAppState extends EventEmitter {
   ]
 
   // NOTE there will not be an activeGachamon when the application starts
+
+  /** * @type {Gachamon}*/
   activeGachamon = null
 }
 

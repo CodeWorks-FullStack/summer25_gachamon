@@ -33,3 +33,7 @@ main {
   transition: all .6s ease-in-out;
   text-shadow: 0 2px 5px black;
 }
+
+.active-gachamon-size {
+  font-size: 15rem;
+}
